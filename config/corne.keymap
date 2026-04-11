@@ -31,11 +31,11 @@
 // |    |  /  |  {  |  }  |  "  |  -  |      |  +  |  '  |  (  |  )  |  ;  |    |
 // |    |  \  |  [  |  ]  |  _  |  `  |      |  ~  |  =  |  <  |  >  |  :  |    |
 //            |     |     |     |     |      |     |     |
-                        bindings = <
-   &trans &trans &trans &trans &trans &trans     &trans &trans &trans &trans &trans &trans
-   &trans &trans &trans &trans &trans &trans     &trans &trans &trans &trans &trans &trans
-   &trans &trans &trans &trans &trans &trans     &trans &trans &trans &trans &trans &trans
-                        &trans &trans &trans     &trans &trans &trans
+                        bindings = <.
+   &trans &kp EXCL &kp AT   &kp HASH &kp DLLR  &kp PERCENT     &kp CARET &kp AMPS  &kp ASTRK &kp QMARK &kp PIPE  &trans
+   &trans &kp FSLH &kp LBRC &kp RBRC &kp DQT   &kp MINUS       &kp PLUS  &kp SQT   &kp LPAR  &kp RPAR  &kp SEMI  &trans
+   &trans &kp BSLH &kp LBKT &kp RBKT &kp UNDER &kp GRAVE       &kp TILDE &kp EQUAL &kp LT    &kp GT    &kp COLON &trans
+                            &trans   &trans    &trans          &trans    &trans    &trans
                         >;
                 };
                 NUM {
