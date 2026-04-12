@@ -23,14 +23,14 @@
 
                 BASE {
 // -----------------------------------------------------------------------------------------
-// | ESC |  Q  |  W  |  E  |  R  |  T   |      |  Y  |  U  |  I  |  O  |  P  |     |
-// | TAB |  A  |  S  |  D  |  F  |  G   |      |  H  |  J  |  K  |  L  |  '  | DEL |
-// |     |  Z  |  X  |  C  |  V  |  B   |      |  N  |  M  |  ,  |  .  |  /  |     |
+// | ESC |  Q  |  W  |  E  |  R  |  T   |      |  Y  |  U  |  I  |  O  |  P  | GAME |
+// | TAB |  A  |  S  |  D  |  F  |  G   |      |  H  |  J  |  K  |  L  |  '  | DEL  |
+// | ENT |  Z  |  X  |  C  |  V  |  B   |      |  N  |  M  |  ,  |  .  |  /  |      |
 //                   | NUM | SPC | BSPC |      | ENT | SYM | NAV |
                         bindings = <
-   &kp ESC   &kp Q       &kp W      &kp E       &kp R       &kp T     &kp Y   &kp U       &kp I       &kp O      &kp P        &none
+   &kp ESC   &kp Q       &kp W      &kp E       &kp R       &kp T     &kp Y   &kp U       &kp I       &kp O      &kp P        &tog 4
    &kp TAB   &mt LGUI A  &mt LALT S &mt LCTRL D &mt LSHFT F &kp G     &kp H   &mt RSHFT J &mt RCTRL K &mt RALT L &mt RGUI SQT &kp DEL
-   &none     &kp Z       &kp X      &kp C       &kp V       &kp B     &kp N   &kp M       &kp COMMA   &kp DOT    &kp FSLH     &none
+   &kp RET   &kp Z       &kp X      &kp C       &kp V       &kp B     &kp N   &kp M       &kp COMMA   &kp DOT    &kp FSLH     &none
                                     &mo 2       &kp SPACE   &kp BSPC  &kp RET &mo 1       &mo 3
                         >;
                 };
