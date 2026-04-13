@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1000  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 10    // default: 10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 
 #include <dt-bindings/zmk/pointing.h>
 
@@ -31,7 +31,7 @@
    &kp ESC   &kp Q       &kp W      &kp E       &kp R       &kp T     &kp Y     &kp U       &kp I       &kp O      &kp P        &tog 4
    &kp TAB   &mt LGUI A  &mt LALT S &mt LCTRL D &mt LSHFT F &kp G     &kp H     &mt RSHFT J &mt RCTRL K &mt RALT L &mt RGUI SQT &kp DEL
    &kp RET   &kp Z       &kp X      &kp C       &kp V       &kp B     &kp N     &kp M       &kp COMMA   &kp DOT    &kp FSLH     &none
-                                    &mo 2       &kp SPACE   &kp BSPC  &lt 3 RET &mo 1       &none
+                                    &mo 2       &lt 5 SPACE   &kp BSPC  &lt 3 RET &mo 1       &lt 3 ESC
                         >;
                 };
                 SYM {
@@ -39,7 +39,7 @@
 // | BT UP |  !  |  @  |  #  |  $  |  %  |      |  ^  |  &  |  *  |  ?  | "|" |    |
 // | BT DN |  /  |  {  |  }  |  "  |  -  |      |  +  |  '  |  (  |  )  |  ;  |    |
 // | BT CLR|  \  |  [  |  ]  |  _  |  `  |      |  ~  |  =  |  <  |  >  |  :  |    |
-//            |     |     |     |     |      |     |     |
+//               |     |     |     |     |      |     |     |
                         bindings = <
    &bt BT_NXT  &kp EXCL &kp AT   &kp HASH &kp DLLR  &kp PERCENT     &kp CARET &kp AMPS  &kp ASTRK &kp QMARK &kp PIPE  &trans
    &bt BT_PRV  &kp FSLH &kp LBRC &kp RBRC &kp DQT   &kp MINUS       &kp PLUS  &kp SQT   &kp LPAR  &kp RPAR  &kp SEMI  &trans
@@ -64,12 +64,12 @@
 // -----------------------------------------------------------------------------------------
 // |   |       |  PRVS   |  PLAY  |  NEXT  |         |      |      |  MUTE  | VL DN | VL UP |        |     |
 // |   | PG UP | SCRL UP | MSBTN1 | MSBTN2 | MDL CLK |      | HOME |  LEFT  | DOWN  |   UP  | RIGHT  | END |
-// |   | PG DN | SCRL DN | MS BCK | MS FRWD|         |      |      | MS LFT | MS DN | MS UP | MS RGT |     |
+// |   | PG DN | SCRL DN | MS BCK | MS FRWD|         |      | MB1  | MS LFT | MS DN | MS UP | MS RGT | MB2 |
 //                       |        |        |         |      |      |        |       |
                         bindings = <
    &trans &trans    &kp K_PREV     &kp K_PP   &kp K_NEXT &trans     &trans   &kp K_MUTE     &kp K_VOL_DN   &kp K_VOL_UP &trans          &trans
    &trans &kp PG_UP &msc SCRL_UP   &mkp MB1   &mkp MB2   &mkp MB3   &kp HOME &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT       &kp END
-   &trans &kp PG_DN &msc SCRL_DOWN &mkp MB4   &mkp MB5   &trans     &trans   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &trans
+   &trans &kp PG_DN &msc SCRL_DOWN &mkp MB4   &mkp MB5   &trans     &mkp MB1 &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &mkp MB2
                                    &trans     &trans     &trans     &trans   &trans         &trans
                         >;
                 };
@@ -85,6 +85,19 @@
    &kp LCTRL &kp Z &kp X &kp C &kp V     &kp B     &kp N     &kp M  &kp COMMA &kp DOT &kp FSLH &kp LALT
                          &mo 2 &kp SPACE &kp BSPC  &lt 3 RET &mo 1  &trans
                         >;
+                };
+                1HND {
+// -----------------------------------------------------------------------------------------
+// | TAB  |  Y  |  U  |  I  |  O  |  P  |      |  Y  |  U  |  I  |  O  |  P  | GAME |
+// | SHFT |  H  |  J  |  K  |  L  |  '  |      |  H  |  J  |  K  |  L  |  '  | DEL  |
+// | CTRL |  N  |  M  |  ,  |  .  |  /  |      |  N  |  M  |  ,  |  .  |  /  | ALT  |
+//                    | NUM | SPC | BSPC |      | ENT | SYM | NAV |
+                        bindings = <
+   &kp TAB   &kp Y &kp U &kp I     &kp O   &kp P     &kp Y     &kp U  &kp I     &kp O   &kp P    &trans
+   &kp LSHFT &kp H &kp J &kp K     &kp L   &kp SQT   &kp H     &kp J  &kp K     &kp L   &kp SQT  &kp DEL
+   &kp LCTRL &kp N &kp M &kp COMMA &kp DOT &kp FSLH  &kp N     &kp M  &kp COMMA &kp DOT &kp FSLH &kp LALT
+                                   &mo 2   &kp SPC   &kp BSPC  &lt 3 RET &mo 1  &trans
+                        >;      
                 };
         };
 };
