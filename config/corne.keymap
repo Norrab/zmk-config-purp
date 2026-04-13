@@ -28,36 +28,36 @@
 // | ENT |  Z  |  X  |  C  |  V  |  B   |      |  N  |  M  |  ,  |  .  |  /  |      |
 //                   | NUM | SPC | BSPC |      | ENT | SYM | NAV |
                         bindings = <
-   &kp ESC   &kp Q       &kp W      &kp E       &kp R       &kp T     &kp Y   &kp U       &kp I       &kp O      &kp P        &tog 4
-   &kp TAB   &mt LGUI A  &mt LALT S &mt LCTRL D &mt LSHFT F &kp G     &kp H   &mt RSHFT J &mt RCTRL K &mt RALT L &mt RGUI SQT &kp DEL
-   &kp RET   &kp Z       &kp X      &kp C       &kp V       &kp B     &kp N   &kp M       &kp COMMA   &kp DOT    &kp FSLH     &none
-                                    &mo 2       &kp SPACE   &kp BSPC  &kp RET &mo 1       &mo 3
+   &kp ESC   &kp Q       &kp W      &kp E       &kp R       &kp T     &kp Y     &kp U       &kp I       &kp O      &kp P        &tog 4
+   &kp TAB   &mt LGUI A  &mt LALT S &mt LCTRL D &mt LSHFT F &kp G     &kp H     &mt RSHFT J &mt RCTRL K &mt RALT L &mt RGUI SQT &kp DEL
+   &kp RET   &kp Z       &kp X      &kp C       &kp V       &kp B     &kp N     &kp M       &kp COMMA   &kp DOT    &kp FSLH     &none
+                                    &mo 2       &kp SPACE   &kp BSPC  &lt 3 RET &mo 1       &none
                         >;
                 };
                 SYM {
 // -----------------------------------------------------------------------------------------
-// |    |  !  |  @  |  #  |  $  |  %  |      |  ^  |  &  |  *  |  ?  | "|" |    |
-// |    |  /  |  {  |  }  |  "  |  -  |      |  +  |  '  |  (  |  )  |  ;  |    |
-// |    |  \  |  [  |  ]  |  _  |  `  |      |  ~  |  =  |  <  |  >  |  :  |    |
+// | BT UP |  !  |  @  |  #  |  $  |  %  |      |  ^  |  &  |  *  |  ?  | "|" |    |
+// | BT DN |  /  |  {  |  }  |  "  |  -  |      |  +  |  '  |  (  |  )  |  ;  |    |
+// | BT CLR|  \  |  [  |  ]  |  _  |  `  |      |  ~  |  =  |  <  |  >  |  :  |    |
 //            |     |     |     |     |      |     |     |
                         bindings = <
-   &trans &kp EXCL &kp AT   &kp HASH &kp DLLR  &kp PERCENT     &kp CARET &kp AMPS  &kp ASTRK &kp QMARK &kp PIPE  &trans
-   &trans &kp FSLH &kp LBRC &kp RBRC &kp DQT   &kp MINUS       &kp PLUS  &kp SQT   &kp LPAR  &kp RPAR  &kp SEMI  &trans
-   &trans &kp BSLH &kp LBKT &kp RBKT &kp UNDER &kp GRAVE       &kp TILDE &kp EQUAL &kp LT    &kp GT    &kp COLON &trans
-                            &trans   &trans    &trans          &trans    &trans    &trans
+   &bt BT_NXT  &kp EXCL &kp AT   &kp HASH &kp DLLR  &kp PERCENT     &kp CARET &kp AMPS  &kp ASTRK &kp QMARK &kp PIPE  &trans
+   &bt BT_PRV  &kp FSLH &kp LBRC &kp RBRC &kp DQT   &kp MINUS       &kp PLUS  &kp SQT   &kp LPAR  &kp RPAR  &kp SEMI  &trans
+   &bt BT_CLR  &kp BSLH &kp LBKT &kp RBKT &kp UNDER &kp GRAVE       &kp TILDE &kp EQUAL &kp LT    &kp GT    &kp COLON &trans
+                                 &trans   &trans    &trans          &trans    &trans    &trans
                         >;
                 };
                 NUM {
 // -----------------------------------------------------------------------------------------
-// | BT UP |  F1 |  F2 |  F3 |  F4 |  F5 |      |   |  7  |  8  |  9  |  *  |     |
-// | BT DN |  F6 |  F7 |  F8 |  F9 | F10 |      |   |  4  |  5  |  6  |  +  |  -  |
-// | BT CLR| F11 | F12 |     |     |     |      |   |  1  |  2  |  3  |  /  |     |
-//                     |     |     |     |      |   |  0  |  .  |
+// | ESC |  F1 |  F2 |  F3 |  F4 |  F5 |      |   |  7  |  8  |  9  |  *  |     |
+// |     |  F6 |  F7 |  F8 |  F9 | F10 |      |   |  4  |  5  |  6  |  +  |  -  |
+// |     | F11 | F12 |     |     |     |      |   |  1  |  2  |  3  |  /  |     |
+//                   |     |     |     |      |   |  0  |  .  |
                         bindings = <
-   &bt BT_NXT &kp F1  &kp F2  &kp F3 &kp F4 &kp F5     &trans &kp N7 &kp N8 &kp N9 &kp ASTRK &trans
-   &bt BT_PRV &kp F6  &kp F7  &kp F8 &kp F9 &kp F10    &trans &kp N4 &kp N5 &kp N6 &kp PLUS  &kp MINUS
-   &bt BT_CLR &kp F11 &kp F12 &trans &trans &trans     &trans &kp N1 &kp N2 &kp N3 &kp FSLH  &trans
-                              &trans &trans &trans     &trans &kp N0 &kp DOT
+   &kp ESC &kp F1  &kp F2  &kp F3 &kp F4 &kp F5     &trans &kp N7 &kp N8 &kp N9 &kp ASTRK &trans
+   &trans  &kp F6  &kp F7  &kp F8 &kp F9 &kp F10    &trans &kp N4 &kp N5 &kp N6 &kp PLUS  &kp MINUS
+   &trans  &kp F11 &kp F12 &trans &trans &trans     &trans &kp N1 &kp N2 &kp N3 &kp FSLH  &trans
+                           &trans &trans &trans     &trans &kp N0 &kp DOT
                         >;
                 };
                 NAV {
@@ -75,15 +75,15 @@
                 };
                 GAME {
 // -----------------------------------------------------------------------------------------
-// | TAB  |  Q  |  W  |  E  |  R  |  T   |      |  Y  |  U  |  I  |  O  |  P  | ESC |
-// | SHFT |  A  |  S  |  D  |  F  |  G   |      |  H  |  J  |  K  |  L  |  '  | DEL |
-// | CTRL |  Z  |  X  |  C  |  V  |  B   |      |  N  |  M  |  ,  |  .  |  /  | ALT |
+// | TAB  |  Q  |  W  |  E  |  R  |  T   |      |  Y  |  U  |  I  |  O  |  P  | GAME |
+// | SHFT |  A  |  S  |  D  |  F  |  G   |      |  H  |  J  |  K  |  L  |  '  | DEL  |
+// | CTRL |  Z  |  X  |  C  |  V  |  B   |      |  N  |  M  |  ,  |  .  |  /  | ALT  |
 //                    | NUM | SPC | BSPC |      | ENT | SYM | NAV |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R     &kp T     &kp Y   &kp U  &kp I     &kp O   &kp P    &kp ESC
-   &kp LSHFT &kp A &kp S &kp D &kp F     &kp G     &kp H   &kp J  &kp K     &kp L   &kp SQT  &kp DEL
-   &kp LCTRL &kp Z &kp X &kp C &kp V     &kp B     &kp N   &kp M  &kp COMMA &kp DOT &kp FSLH &kp LALT
-                         &mo 2 &kp SPACE &kp BSPC  &kp RET &mo 1  &mo 3
+   &kp TAB   &kp Q &kp W &kp E &kp R     &kp T     &kp Y     &kp U  &kp I     &kp O   &kp P    &trans
+   &kp LSHFT &kp A &kp S &kp D &kp F     &kp G     &kp H     &kp J  &kp K     &kp L   &kp SQT  &kp DEL
+   &kp LCTRL &kp Z &kp X &kp C &kp V     &kp B     &kp N     &kp M  &kp COMMA &kp DOT &kp FSLH &kp LALT
+                         &mo 2 &kp SPACE &kp BSPC  &lt 3 RET &mo 1  &trans
                         >;
                 };
         };
