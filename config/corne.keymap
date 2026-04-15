@@ -17,6 +17,10 @@
     flavor = "tap-preferred";
 };
 
+&lt {
+    flavor = "hold-perferred";
+}
+
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -30,8 +34,8 @@
                         bindings = <
    &kp ESC   &kp Q       &kp W      &kp E       &kp R       &kp T     &kp Y     &kp U       &kp I       &kp O      &kp P        &tog 4
    &kp TAB   &mt LGUI A  &mt LALT S &mt LCTRL D &mt LSHFT F &kp G     &kp H     &mt RSHFT J &mt RCTRL K &mt RALT L &mt RGUI SQT &kp DEL
-   &kp RET   &kp Z       &kp X      &kp C       &kp V       &kp B     &kp N     &kp M       &kp COMMA   &kp DOT    &kp FSLH     &none
-                                    &mo 2       &lt 5 SPACE   &kp BSPC  &lt 3 RET &mo 1       &lt 3 ESC
+   &kp RET   &kp Z       &kp X      &kp C       &kp V       &kp B     &kp N     &kp M       &kp COMMA   &kp DOT    &kp FSLH     &mo 3
+                                    &mo 2       &lt 5 SPACE &kp BSPC  &lt 3 RET &mo 1       &lt 3 ESC
                         >;
                 };
                 SYM {
@@ -93,10 +97,10 @@
 // | CTRL |  N  |  M  |  ,  |  .  |  /  |      |  N  |  M  |  ,  |  .  |  /  | ALT  |
 //                    | NUM | SPC | BSPC |      | ENT | SYM | NAV |
                         bindings = <
-   &kp TAB   &kp Y &kp U &kp I     &kp O   &kp P     &kp Y     &kp U  &kp I     &kp O   &kp P    &trans
-   &kp LSHFT &kp H &kp J &kp K     &kp L   &kp SQT   &kp H     &kp J  &kp K     &kp L   &kp SQT  &kp DEL
-   &kp LCTRL &kp N &kp M &kp COMMA &kp DOT &kp FSLH  &kp N     &kp M  &kp COMMA &kp DOT &kp FSLH &kp LALT
-                                   &mo 2   &kp SPC   &kp BSPC  &lt 3 RET &mo 1  &trans
+   &kp TAB   &kp Y &kp U &kp I     &kp O   &kp P     &kp Y     &kp U     &kp I     &kp O   &kp P    &trans
+   &kp LSHFT &kp H &kp J &kp K     &kp L   &kp SQT   &kp H     &kp J     &kp K     &kp L   &kp SQT  &kp DEL
+   &kp LCTRL &kp N &kp M &kp COMMA &kp DOT &kp FSLH  &kp N     &kp M     &kp COMMA &kp DOT &kp FSLH &kp LALT
+                                   &mo 2   &kp SPC   &kp BSPC  &lt 3 RET &mo 1     &trans
                         >;      
                 };
         };
