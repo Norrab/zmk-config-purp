@@ -32,10 +32,10 @@
 // | ENT |  Z  |  X  |  C  |  V  |  B   |      |  N  |  M  |  ,  |  .  |  /  |      |
 //                   | NUM | SPC | BSPC |      | ENT | SYM | NAV |
                         bindings = <
-   &kp ESC   &kp Q       &kp W      &kp E       &kp R       &kp T     &kp Y     &kp U       &kp I       &kp O      &kp P        &tog 4
-   &kp TAB   &mt LGUI A  &mt LALT S &mt LCTRL D &mt LSHFT F &kp G     &kp H     &mt RSHFT J &mt RCTRL K &mt RALT L &mt RGUI SQT &kp DEL
-   &kp RET   &kp Z       &kp X      &kp C       &kp V       &kp B     &kp N     &kp M       &kp COMMA   &kp DOT    &kp FSLH     &mo 3
-                                    &mo 2       &lt 5 SPACE &kp BSPC  &lt 3 RET &mo 1       &lt 3 ESC
+   &kp ESC   &kp Q       &kp W      &kp E       &kp R       &kp T     &kp Y   &kp U       &kp I       &kp O      &kp P        &tog 4
+   &kp TAB   &mt LGUI A  &mt LALT S &mt LCTRL D &mt LSHFT F &kp G     &kp H   &mt RSHFT J &mt RCTRL K &mt RALT L &mt RGUI SQT &kp DEL
+   &kp RET   &kp Z       &kp X      &kp C       &kp V       &kp B     &kp N   &kp M       &kp COMMA   &kp DOT    &kp FSLH     &mo 3
+                                    &mo 2       &lt 5 SPACE &kp BSPC  &kp RET &mo 1       &lt 3 ESC
                         >;
                 };
                 SYM {
