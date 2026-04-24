@@ -14,6 +14,8 @@
 
 #include <dt-bindings/zmk/pointing.h>
 
+&led_strip { chain-length = 21; };
+
 &mt {
     flavor = "tap-preferred";
 };
