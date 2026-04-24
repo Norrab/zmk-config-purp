@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/rgb.h>
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1000  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
@@ -29,7 +30,7 @@
 // -----------------------------------------------------------------------------------------
 // | ESC |  Q  |  W  |  E  |  R  |  T   |      |  Y  |  U  |  I  |  O  |  P  | GAME |
 // | TAB |  A  |  S  |  D  |  F  |  G   |      |  H  |  J  |  K  |  L  |  '  | DEL  |
-// | ENT |  Z  |  X  |  C  |  V  |  B   |      |  N  |  M  |  ,  |  .  |  /  |      |
+// | ENT |  Z  |  X  |  C  |  V  |  B   |      |  N  |  M  |  ,  |  .  |  /  | NAV  |
 //                   | NUM | SPC | BSPC |      | ENT | SYM | NAV |
                         bindings = <
    &kp ESC   &kp Q       &kp W      &kp E       &kp R       &kp T     &kp Y   &kp U       &kp I       &kp O      &kp P        &tog 4
@@ -55,12 +56,12 @@
 // -----------------------------------------------------------------------------------------
 // | ESC |  F1 |  F2 |  F3 |  F4 |  F5 |      |   |  7  |  8  |  9  |  *  |     |
 // |     |  F6 |  F7 |  F8 |  F9 | F10 |      |   |  4  |  5  |  6  |  +  |  -  |
-// |     | F11 | F12 |     |     |     |      |   |  1  |  2  |  3  |  /  |     |
+// |     | F11 | F12 | RGB | CYCL| HUE |      |   |  1  |  2  |  3  |  /  |     |
 //                   |     |     |     |      |   |  0  |  .  |
                         bindings = <
    &kp ESC &kp F1  &kp F2  &kp F3 &kp F4 &kp F5     &trans &kp N7 &kp N8 &kp N9 &kp ASTRK &trans
    &trans  &kp F6  &kp F7  &kp F8 &kp F9 &kp F10    &trans &kp N4 &kp N5 &kp N6 &kp PLUS  &kp MINUS
-   &trans  &kp F11 &kp F12 &trans &trans &trans     &trans &kp N1 &kp N2 &kp N3 &kp FSLH  &trans
+   &trans  &kp F11 &kp F12 &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_HUI     &trans &kp N1 &kp N2 &kp N3 &kp FSLH  &trans
                            &trans &trans &trans     &trans &kp N0 &kp DOT
                         >;
                 };
