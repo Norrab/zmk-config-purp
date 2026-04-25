@@ -58,12 +58,12 @@
 // -----------------------------------------------------------------------------------------
 // | ESC |  F1 |  F2 |  F3 |  F4 |  F5 |      |   |  7  |  8  |  9  |  *  |     |
 // |     |  F6 |  F7 |  F8 |  F9 | F10 |      |   |  4  |  5  |  6  |  +  |  -  |
-// |     | F11 | F12 | RGB | CYCL| HUE |      |   |  1  |  2  |  3  |  /  |     |
+// | RBG | F11 | F12 |     |     |     |      |   |  1  |  2  |  3  |  /  |     |
 //                   |     |     |     |      |   |  0  |  .  |
                         bindings = <
    &kp ESC &kp F1  &kp F2  &kp F3 &kp F4 &kp F5     &trans &kp N7 &kp N8 &kp N9 &kp ASTRK &trans
    &trans  &kp F6  &kp F7  &kp F8 &kp F9 &kp F10    &trans &kp N4 &kp N5 &kp N6 &kp PLUS  &kp MINUS
-   &trans  &kp F11 &kp F12 &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_HUI     &trans &kp N1 &kp N2 &kp N3 &kp FSLH  &trans
+   &tog 6  &kp F11 &kp F12 &trans &trans &trans     &trans &kp N1 &kp N2 &kp N3 &kp FSLH  &trans
                            &trans &trans &trans     &trans &kp N0 &kp DOT
                         >;
                 };
@@ -98,13 +98,26 @@
 // | TAB  |  Y  |  U  |  I  |  O  |  P  |      |  Y  |  U  |  I  |  O  |  P  | GAME |
 // | SHFT |  H  |  J  |  K  |  L  |  '  |      |  H  |  J  |  K  |  L  |  '  | DEL  |
 // | CTRL |  N  |  M  |  ,  |  .  |  /  |      |  N  |  M  |  ,  |  .  |  /  | ALT  |
-//                    | NUM | SPC | BSPC |      | ENT | SYM | NAV |
+//                    | NUM | SPC | BSPC|      | ENT | SYM | NAV |
                         bindings = <
    &kp TAB   &kp Y &kp U &kp I     &kp O   &kp P     &kp Y     &kp U     &kp I     &kp O   &kp P    &trans
    &kp LSHFT &kp H &kp J &kp K     &kp L   &kp SQT   &kp H     &kp J     &kp K     &kp L   &kp SQT  &kp DEL
    &kp LCTRL &kp N &kp M &kp COMMA &kp DOT &kp FSLH  &kp N     &kp M     &kp COMMA &kp DOT &kp FSLH &kp LALT
                                    &mo 2   &kp SPC   &kp BSPC  &lt 3 RET &mo 1     &trans
                         >;      
+                };
+                RGB {
+// -----------------------------------------------------------------------------------------
+// |   |     | SPD | SPI | EFF | EFR |      |    |    |    |    |    |   |
+// |   | TOG | HUD | HUI | BRD | BRI |      |    |    |    |    |    |   |
+// |   |     | SAD | SAI |     |     |      |    |    |    |    |    |   |
+//                 |     |     |     |      |    |    |    |
+                        bindings = <
+   &trans &trans          &rgb_ug RGB_SPD &rgb_ug RGB_SPI &rgb_ug RGB_EFF &rgb_ug RGB_EFR    &trans &trans &trans &trans &trans &trans 
+   &trans &rgb_ug RGB_TOG &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_BRD &rgb_ug RGB_BRI    &trans &trans &trans &trans &trans &trans 
+   &trans &trans          &rgb_ug RGB_SAD &rgb_ug RGB_SAI &trans          &trans             &trans &trans &trans &trans &trans &trans 
+                                          &trans          &trans          &trans             &trans &trans &trans 
+                        >;                         
                 };
         };
 };
