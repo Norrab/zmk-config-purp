@@ -9,6 +9,8 @@ manifest:
     # support nice_oled and nice_epaper
     - name: mctechnology17
       url-base: https://github.com/mctechnology17
+    - name: badjeff
+      url_base: https://github.com/badjeff
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -16,6 +18,10 @@ manifest:
     # support nice_oled and nice_epaper
     - name: zmk-nice-oled
       remote: mctechnology17
+      revision: main
+    # TrackPoint support
+    - name: kb_zmk_ps2_mouse_trackpoint_driver
+      remote: badjeff
       revision: main
   self:
     path: config
